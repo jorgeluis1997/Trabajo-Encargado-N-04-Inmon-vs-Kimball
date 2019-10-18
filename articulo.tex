@@ -1,0 +1,250 @@
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} 
+\usepackage{graphicx}
+\usepackage[sc]{mathpazo} 
+\usepackage[T1]{fontenc} 
+\linespread{1.05} 
+\usepackage{microtype} 
+
+
+\usepackage[english]{babel} 
+
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} 
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} 
+\usepackage{booktabs} 
+
+
+\usepackage{lettrine} 
+
+
+\usepackage{enumitem} 
+\setlist[itemize]{noitemsep} 
+
+
+\usepackage{abstract} 
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} 
+
+
+\usepackage{titlesec} 
+\renewcommand\thesection{\Roman{section}} % 
+\renewcommand\thesubsection{\roman{subsection}} 
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} 
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} 
+
+
+\usepackage{fancyhdr} 
+\pagestyle{fancy} 
+\fancyhead{} 
+\fancyfoot{} 
+\fancyhead[C]{Inmon vs Kimball $\bullet$ Septiembre 2019 $\bullet$ } 
+\fancyfoot[RO,LE]{\thepage} 
+
+
+\usepackage{titling} 
+
+
+\usepackage{hyperref} 
+
+
+%----------------------------------------------------------------------------------------
+%	TILULOS
+%----------------------------------------------------------------------------------------
+
+
+\setlength{\droptitle}{-4\baselineskip} 
+
+\pretitle{\begin{center}\Huge\bfseries} 
+\posttitle{\end{center}} 
+\title{Inmon vs Kimball} 
+\author{Marko Antonio Rivas Rios\\  \\
+}
+\date{\today} 
+\renewcommand{\maketitlehookd}{
+
+\begin{abstract}
+\noindent 
+Resumen
+
+
+\end{abstract}
+
+
+\begin{abstract}
+\noindent 
+Abstract
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCCION
+%----------------------------------------------------------------------------------------
+
+\section{Introduccion}
+\lettrine[nindent=0em,lines=3]{A}qui va la introduccion
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Objetivos
+%----------------------------------------------------------------------------------------
+
+
+\section{Objetivos}
+
+\begin{itemize}
+
+\item \textbf{Inmon}
+\\
+\item Objetivo 1
+\item Objetivo 1
+\\
+
+\item \textbf{Kimball}
+\\
+\item Objetivo 1
+\item Objetivo 1
+\\
+
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	Marco teorico
+%----------------------------------------------------------------------------------------
+
+
+\section{Marco teorico}
+\begin{enumerate}
+\item \textbf{Metodologìa Kimboll}: se utiliza para la construcción de un almacén de datos (data warehouse, DW) es decir, una colección de datos situada en un determinado lugar, (empresa, organización, etc.), integrado y variable en el tiempo, ayudando a la toma de decisiones. (Inestroza, 2018) \\
+
+\textbf{Enfoque Kimball}
+\\ \\
+Contiene varios principios básicos que se analizan detenidamente en el libro de herramientas de Data Warehouse Lifecycle, Second Edition (Kimball, Ross, Mundy, y Becker, 2008)
+\begin{itemize}
+\item Seguir una metodología comprobada como el  ciclo de vida Kimball.
+\item Comprender los requisitos comerciales para priorizar esfuerzos y generar valor comercial. 
+\item Diseñar los conjuntos de datos con las características de usabilidad, flexibilidad y rendimiento.
+\item Crear y entregar con rapidez los incrementos de los datos basados en procesos comerciales, conocidos con el nombre de almacenamiento de datos. 
+\item Diseñar y construir una arquitectura de sistema DW/BI basado en lo que el negocio necesite, según su volumen de datos y entorno de sistemas de TI. 
+\item Desarrollar el sistema de extracción, transformación y carga (ETL) con componentes estándar que se encuentran en el entorno de datos analíticos para tratar los patrones de diseño comunes.
+\item Brindar la información total, tales como: informes, herramientas de consulta, aplicaciones, portales, documentación, capacitación y soporte.
+\end{itemize}
+
+
+
+\textbf{Business dimensional lifecycle}
+\\ \\
+La metodología se basa en lo que Kimball denomina, traducida al español “Ciclo de Vida Dimensional del Negocio”. Basado en cuatro principios básicos:
+
+\begin{itemize}
+\item Centrarse en el negocio.
+\item Construir una infraestructura de información adecuada.
+\item Realizar entregas en incrementos significativos (este principio consiste en crear el almacén de datos (DW) en incrementos entregables en plazos de 6 a 12 meses, en este punto, la metodología se parece a las metodologías ágiles de construcción de software).
+\item Ofrecer la solución completa (En este se punto proporcionan todos los elementos necesarios para entregar valor a los usuarios de negocios, para esto ya se debe tener un almacén de datos bien diseñado, se deberán entregar herramientas de consulta ad hoc, aplicaciones para informes y análisis avanzado, capacitación, soporte, sitio web y documentación).
+
+\end{itemize}
+La construcción de una solución de DW/BI (Datawarehouse/Business Intelligence) es sumamente compleja, y Kimball plantea una metodología que simplifica esa complejidad. \\ \\
+El enfoque del ciclo de vida Kimball se ilustra en el siguiente diagrama. Facilita una hoja de ruta general que constituye la serie de tareas de alto nivel solicitadas para proyectos exitosos de DW / BI.
+
+
+\includegraphics[width=7.5cm]{Imagenes/Kimboll2}
+
+\textit{"Independientemente de los objetivos específicos de DW / BI de su organización, creemos que un objetivo global del equipo debería ser la aceptación comercial de los entregables de DW / BI para respaldar la toma de decisiones de la empresa. Este objetivo debe permanecer a la vanguardia en todo el diseño, desarrollo e implementación de su sistema DW / BI "} (Arias, 2018)
+\\ \\
+
+
+\textbf{Definicion de requerimientos}
+
+Entre las tareas para definir los requerimientos, existe una flecha bidireccional, esta indica que los requerimientos del negocio son el soporte inicial y también tiene influencia en el plan del proyecto.\\
+
+Si nos fijamos en el centro del diagrama, vemos las tareas asociadas al área de “Datos”, en esta, se diseña e implementa el modelo dimensional, se desarrolla el sub-sistema de extracción, transformación, carga (extract, transformation, and Load-ETL) \\
+
+Las tareas pertenecientes a esta área son:
+
+\begin{itemize}
+\item [1.] Modelado Dimensional
+\begin{itemize}
+\item [1.1.] Elección del proceso de negocio
+\item [1.2.] Establecer el nivel de granularidad
+\item [1.3.] Elegir las dimensiones
+\item [1.4.] Identificar medidas y las tablas de hechos
+\end{itemize}
+\item [2.] Diseño Físico
+\item [3.] Diseño e Implementación del subsistema de Extracción, Transformación y Carga (ETL)
+\item [4.] Implementación
+\item [5.] Mantenimiento y Crecimiento del Data Warehouse
+
+
+
+\end{itemize}
+
+
+	
+\end{enumerate}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Ejemplo
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	Análisis
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONES
+%----------------------------------------------------------------------------------------
+
+\section{Conclusiones}
+\begin{itemize}	
+ \item conclusion 1
+\\
+\item conclusion 2
+
+\end{itemize} 
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+
+
+\begin{thebibliography}{99} 
+
+\bibitem[1]{}
+\newblock Arias, D. (4 de marzo de 2018). Todo Sobre La Metodologia Kimball. Obtenido de postparaprogramadores: https://postparaprogramadores.com/metodologia-kimball/\#respond
+
+\bibitem[2]{}
+\newblock Inestroza, M. (18 de Junio de 2018). METODOLOGÍA KIMBALL. Obtenido de goconsultores.com: http://www.goconsultores.com/tag/metodologia-kimball/
+
+\bibitem[3]{}
+\newblock Kimball, R., Ross, M., Mundy, J., \& Becker, B. (2008). The Data Warehouse Lifecycle Toolkit, 2nd Edition. Wiley.
+
+
+\end{thebibliography}
+
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
